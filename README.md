@@ -56,13 +56,14 @@ https://github.com/aws-cloud-clubs/ACC-sixback
 
 ### STEP 1: 송신자는 발송할 메일 템플릿을 선택한 뒤, 내용을 완성하고 이메일 수신자 목록(.csv)을 업로드한다.
 
-![스크린샷 2024-08-03 오전 5.02.17.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f203d03b-98d6-4069-bace-3bb7447ea322/6a7b25e2-c55d-46dc-b208-1a3056a9b086/3762a030-8b00-4d83-8076-09a70fd69357.png)
+![image](https://github.com/user-attachments/assets/c4c90195-209e-4f38-9761-1cb5b91023a5)
+![image](https://github.com/user-attachments/assets/093bef6b-083e-47b4-8198-5c9872fc90c8)
 
-![스크린샷 2024-08-03 오전 5.02.37.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f203d03b-98d6-4069-bace-3bb7447ea322/b4fa7856-22b3-46b1-93a4-d17acafb8055/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-03_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_5.02.37.png)
 
 ### [/api/url]
 
-![스크린샷 2024-08-03 오전 9.06.04.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f203d03b-98d6-4069-bace-3bb7447ea322/1214f9e8-fed5-400e-a06f-22437a9149f8/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-03_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_9.06.04.png)
+![image](https://github.com/user-attachments/assets/bf708fa1-431a-4976-aaf3-1055b1940f46)
+
 
 - `email-urls-lambda`: Presigned URL 생성 요청 후 반환
 - Client: Presigned URL을 통해 이미지 및 이메일 수신자 목록(.csv) 파일 버킷 업로드
@@ -73,7 +74,8 @@ https://github.com/aws-cloud-clubs/ACC-sixback
 
 ### 즉시발송: [/api/general]
 
-![스크린샷 2024-08-03 오전 9.06.31.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f203d03b-98d6-4069-bace-3bb7447ea322/83704efe-e46d-4de2-9511-9b8848431100/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-03_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_9.06.31.png)
+![image](https://github.com/user-attachments/assets/ecdbd757-ebfe-4ee4-bd2e-bc3932653b49)
+
 
 - Client: json을 전송해 `generalinput-lambda` 실행
 
@@ -105,7 +107,8 @@ https://github.com/aws-cloud-clubs/ACC-sixback
 
 ### 예약발송: [/api/reservation]
 
-![스크린샷 2024-08-03 오전 9.09.28.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f203d03b-98d6-4069-bace-3bb7447ea322/178f9738-a759-4734-ad57-bb2135a0657b/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-03_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_9.09.28.png)
+![image](https://github.com/user-attachments/assets/c6d6971d-0b82-4867-aa06-8c6f1a0e6f9c)
+
 
 - Client: json을 전송해 `reservationinput-lambda` 실행
 
@@ -137,7 +140,7 @@ https://github.com/aws-cloud-clubs/ACC-sixback
 - `reservated-email-sqs`: `dev-email-generalinput-lambda-primary-1`로 전송 예약 시각을 제외한 json 전송
 - **나머지 부분은 즉시 발송과 동일**
 
-![reservationinput-lambda-primary-1에서 create schedule을 하여 eventbridge schedule에 표시되는 모습](https://prod-files-secure.s3.us-west-2.amazonaws.com/f203d03b-98d6-4069-bace-3bb7447ea322/0f56af97-8443-43ee-80ed-b459ea68903a/Untitled.png)
+![image](https://github.com/user-attachments/assets/23c317df-cdf0-4c73-9dab-4b0522ca73e2)
 
 reservationinput-lambda-primary-1에서 create schedule을 하여 eventbridge schedule에 표시되는 모습
 
@@ -145,7 +148,8 @@ reservationinput-lambda-primary-1에서 create schedule을 하여 eventbridge sc
 
 ## 1,000개의 메일을 5분 이내에 발송하는 경우
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f203d03b-98d6-4069-bace-3bb7447ea322/7b3f78c8-d481-4bff-9be1-7d8748fee8af/Untitled.png)
+![image](https://github.com/user-attachments/assets/54193d3e-660c-4069-989f-0fee56bc60ff)
+
 
 - 공식문서에 의하면, 기본적으로 람다 함수의 각 실행 환경은 초당 10개가 최대이다. 따라서 실행 시간이 100ms 이하인 요청이 3,000개 들어오면 300개 인스턴스로 동시성 처리를 할 수 있다.
     - 실제 테스트 시 이메일 발송 1건을 발송 시 500ms 이하의 시간이 책정되어 1초의 1개의 람다가 2개의 메일 발송이 가능합니다. 람다의 동시성은 1000개로 1초당 2000개의 메일 처리가 가능할 것으로 예상합니다.
@@ -153,16 +157,9 @@ reservationinput-lambda-primary-1에서 create schedule을 하여 eventbridge sc
 
 ## 30,000개의 메일을 5분 이내에 발송하는 경우
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f203d03b-98d6-4069-bace-3bb7447ea322/6e52fe67-4321-4c7b-92d9-09ecafd402cb/Untitled.png)
+![image](https://github.com/user-attachments/assets/8f85aba2-c00a-407b-bccb-23f3bef349df)
 
-- ~50,000명까지 월 20.02 USD vs 월 21만원(기존 이메일 마케팅 서비스)
-    
-    ![스크린샷 2024-08-03 오전 7.21.38.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f203d03b-98d6-4069-bace-3bb7447ea322/06a55e0b-3a2e-4377-9fbb-ee2445b0a586/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-03_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_7.21.38.png)
-    
-    ![스크린샷 2024-08-03 오전 7.35.13.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f203d03b-98d6-4069-bace-3bb7447ea322/fe76d058-aa84-4943-9531-2df636316d41/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-08-03_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_7.35.13.png)
-    
-    위 서비스는 [스티비](https://stibee.com/)라는 이메일 마케팅 서비스이다. 
-    
+
 
 ## 1,000,000개의 메일을 5분 이내에 발송하는 경우
 
