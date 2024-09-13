@@ -1,6 +1,6 @@
 # ACC-sixback
 ACC 해커톤 1팀 식스백
-![image](https://github.com/user-attachments/assets/cb47114e-6863-485a-a8de-57c97f1231df)
+
 # 프로젝트 소개
 
 > 주제: 이메일 대량 발송 시스템 설계
@@ -23,8 +23,7 @@ https://github.com/aws-cloud-clubs/ACC-sixback
 - 이메일 발송 기능은 주요 비즈니스 로직과 관련이 적다. 따라서 서버리스 아키텍처로 인프라 오버헤드와 비용을 절감하고 유연하게 대량 트래픽에 대처한다.
 
 # 최종 아키텍처
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f203d03b-98d6-4069-bace-3bb7447ea322/8643ea04-63fb-4844-a531-f26bb11a9726/Untitled.png)
+![image](https://github.com/user-attachments/assets/cb47114e-6863-485a-a8de-57c97f1231df)
 
 # 서비스 플로우
 
