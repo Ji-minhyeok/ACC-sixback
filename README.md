@@ -61,7 +61,9 @@ https://github.com/aws-cloud-clubs/ACC-sixback
 
 ### [/api/url]
 
-![image](https://github.com/user-attachments/assets/bf708fa1-431a-4976-aaf3-1055b1940f46)
+![image](https://github.com/user-attachments/assets/709824a7-8df2-40bb-b1d0-4f1dbebc7ca9)
+
+
 
 
 - `email-urls-lambda`: Presigned URL 생성 요청 후 반환
@@ -73,7 +75,8 @@ https://github.com/aws-cloud-clubs/ACC-sixback
 
 ### 즉시발송: [/api/general]
 
-![image](https://github.com/user-attachments/assets/ecdbd757-ebfe-4ee4-bd2e-bc3932653b49)
+![image](https://github.com/user-attachments/assets/68fa5e13-93eb-45a6-bbbc-1674b0a6589f)
+
 
 
 - Client: json을 전송해 `generalinput-lambda` 실행
@@ -106,7 +109,8 @@ https://github.com/aws-cloud-clubs/ACC-sixback
 
 ### 예약발송: [/api/reservation]
 
-![image](https://github.com/user-attachments/assets/c6d6971d-0b82-4867-aa06-8c6f1a0e6f9c)
+![image](https://github.com/user-attachments/assets/7509841d-3fcc-4fd5-bc08-7f1131b73da0)
+
 
 
 - Client: json을 전송해 `reservationinput-lambda` 실행
@@ -139,7 +143,8 @@ https://github.com/aws-cloud-clubs/ACC-sixback
 - `reservated-email-sqs`: `dev-email-generalinput-lambda-primary-1`로 전송 예약 시각을 제외한 json 전송
 - **나머지 부분은 즉시 발송과 동일**
 
-![image](https://github.com/user-attachments/assets/23c317df-cdf0-4c73-9dab-4b0522ca73e2)
+![image](https://github.com/user-attachments/assets/8a1eca86-402f-45b5-b44d-ebe65cc5be32)
+
 
 reservationinput-lambda-primary-1에서 create schedule을 하여 eventbridge schedule에 표시되는 모습
 
@@ -147,7 +152,8 @@ reservationinput-lambda-primary-1에서 create schedule을 하여 eventbridge sc
 
 ## 1,000개의 메일을 5분 이내에 발송하는 경우
 
-![image](https://github.com/user-attachments/assets/54193d3e-660c-4069-989f-0fee56bc60ff)
+![image](https://github.com/user-attachments/assets/c9cd10f7-d38d-4531-9358-69384ba87851)
+
 
 
 - 공식문서에 의하면, 기본적으로 람다 함수의 각 실행 환경은 초당 10개가 최대이다. 따라서 실행 시간이 100ms 이하인 요청이 3,000개 들어오면 300개 인스턴스로 동시성 처리를 할 수 있다.
@@ -156,7 +162,8 @@ reservationinput-lambda-primary-1에서 create schedule을 하여 eventbridge sc
 
 ## 30,000개의 메일을 5분 이내에 발송하는 경우
 
-![image](https://github.com/user-attachments/assets/8f85aba2-c00a-407b-bccb-23f3bef349df)
+![image](https://github.com/user-attachments/assets/a72591d0-bc29-4e10-a7b5-3bbf1f21ee63)
+
 
 
 
